@@ -6,11 +6,18 @@ namespace MiscLib
     {
         //---- Group 2 Functions ----------
         public int CalcRectPerimeter(int length, int width) {
-            throw new NotImplementedException();
+            int perimter;
+            perimter =  2 * (length + width);
+            return perimter;
         }
 
         public bool IsTriangularNum(int num) {
-            throw new NotImplementedException();
+            
+            for (int i = 0; i < length; i++)
+            {
+                
+            }
+            
         }
 
         public int FarenheitToCelcius(int farenheit) {
