@@ -12,7 +12,7 @@ namespace Tests
         [InlineData(69114, 12, 34545)]
         public void CalcRectPerimeter_Test(int expected, int input_one, int input_two)
         {
-            msclib = new GroupTwoFunctions();
+            var msclib = new GroupTwoFunctions();
             var result = msclib.CalcRectPerimeter(input_one, input_two);
             Assert.Equal(expected, result);
         }    
@@ -24,19 +24,19 @@ namespace Tests
         [InlineData(false, 665)] 
         public void IsTriangularNum_Test(bool expected, int input)
         {
-            msclib = new GroupTwoFunctions();
+            var msclib = new GroupTwoFunctions();
             var result = msclib.IsTriangularNum(input);
             Assert.Equal(expected, result);
         }  
 
         [Theory]
-        [InlineData(32, 0)]
-        [InlineData(780, 415.556)]
-        [InlineData(-22, -30)]
-        [InlineData(-103, -75)]
+        [InlineData(0, 32)]
+        [InlineData(415, 780)]
+        [InlineData(-30, -20)]
+        [InlineData(-75, -103)]
         public void FarenheitToCelcius_Test(int expected, int Finput)
         {
-            msclib = new GroupTwoFunctions();
+            var msclib = new GroupTwoFunctions();
             var result = msclib.FarenheitToCelcius(Finput);
             Assert.Equal(expected, result);
         }  
@@ -49,7 +49,7 @@ namespace Tests
         [InlineData(false, "Motorboated")]  
         public void CheckWhiteSpace_Test(bool expected, string userInput)
         {
-            msclib = new GroupTwoFunctions();
+            var msclib = new GroupTwoFunctions();
             var result = msclib.CheckWhiteSpace(userInput);
             Assert.Equal(expected, result);
         }    
@@ -58,10 +58,10 @@ namespace Tests
         [InlineData("ThIs", "ThIs")]
         [InlineData("SoMeTiMe", "SoMeTiMe")]
         [InlineData("SoMeThIhNg", "somethihng")]
-        [InlineData("UnSeTsTaDnIgN", "unserstadnign")]
+        [InlineData("UnSeTsTaDnIgN", "unsetstadnign")]
         public void CamelString_Test(string expected, string userInput)
         {
-            msclib = new GroupTwoFunctions();
+            var msclib = new GroupTwoFunctions();
             var result = msclib.CamelString(userInput);
             Assert.Equal(expected, result);
         }    
@@ -73,8 +73,8 @@ namespace Tests
         [InlineData(6, "123456")]
         public void CountDigits(int expected, string input)
         {
-            msclib = new GroupTwoFunctions();
-            var result = msclib.CountDigits(userInput);
+            var msclib = new GroupTwoFunctions();
+            var result = msclib.CountDigits(input);
             Assert.Equal(expected, result);
         }      
     }   
